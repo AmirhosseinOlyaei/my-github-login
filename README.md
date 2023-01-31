@@ -14,7 +14,7 @@ Get an HTML ElementbyId
 "Watching an event on an element"
 Relevant JS events
 
-https://i.imgur.com/CWtnBg7.png
+![](https://i.imgur.com/CWtnBg7.png)
 
 - issues:  
 	- Create a new repository  
