@@ -1,7 +1,7 @@
 const accountFormElement = document.getElementById("account-form");
 const userNameElement = document. getElementById("user-name-email");
 const messageElement = document.getElementById("error-message");
-const messageValue = `
+const errorMessage = `
 <div
 class="flex justify-center items-center space-x-4 border border-[#ffc1c0] rounded-md p-3 mb-4 w-80 bg-[#ffebe8]">
 <p>Incorrect username or password.</p>
@@ -20,13 +20,22 @@ accountFormElement.addEventListener("submit", function(event) {
     event.preventDefault();
     const userName = String(userNameElement.value);
 
-if (userName === '') {
-  console.log('aaa');
-    messageElement.innerHTML = messageValue
-} else if (userName.length <= 6) {
-    messageElement.innerHTML = messageValue
-} else if (userName.includes('@') === false) {
-  messageElement.innerHTML = messageValue
-};
+if (userName === '' || userName.length < 6 || userName.includes('@') === false) {
+    messageElement.innerHTML = errorMessage
+} else {
+   messageElement.innerHTML = ''
+}
+
 
 });
+
+messageElement.addEventListener("click", function(event2) {
+    document.getElementById("error-message").classList.add('invisible');
+    // messageElement.innerHTML = '';
+});
+
+// We want to validate the following:
+// Username or email address is not empty.
+// Username or email address is more that 6 characters.
+// Password fields is not empty.
+// Password fiend is more than 6 characters.
