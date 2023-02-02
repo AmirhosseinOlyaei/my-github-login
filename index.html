@@ -22,17 +22,32 @@
         </div>
         <!-- logo text -->
         <p class="mt-6 mb-4">Sign in to GitHub</p>
+        <!-- error message -->
+        <div id="error-message"></div>
+        <div
+            class="flex justify-center items-center space-x-4 border border-[#ffc1c0] rounded-md p-3 mb-4 w-80 bg-[#ffebe8]">
+            <p>Incorrect username or password.</p>
+            <button class="" type="button" aria-label="Dismiss this message">
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                    data-view-component="true" class="">
+                    <path fill-rule="evenodd" fill="#cc0e22"
+                        d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z">
+                    </path>
+                </svg>
+            </button>
+        </div>
         <!-- sign in form -->
         <div class="border rounded-md bg-[#f6f8fa] p-4 w-[20rem]">
-            <form action="" class="flex flex-col">
+            <form action="" id="account-form" class="flex flex-col">
                 <label for="">Username or email address</label>
-                <input type="text" name="user-name" id="" class="my-2 border rounded-md p-0.5" />
+                <input type="text" name="log-in" id="user-name-email" class="my-2 border rounded-md p-0.5" />
 
                 <div class="flex items-center space-x-24"><label for="">Password</label><a href="#"
                         class="text-blue-600 text-sm">Forgot password?</a></div>
                 <input type="password" name="password" id="" class="my-2 border rounded-md p-0.5" />
                 <!-- submit bottom -->
-                <button class="w-full border rounded-md bg-green-600 text-white text-sm p-1 mt-2">Sign In</button>
+                <input type="submit" value="Sign In"
+                    class="w-full border rounded-md bg-green-600 text-white text-sm p-1 mt-2" />
             </form>
         </div>
         <!-- new registeration -->
@@ -42,7 +57,7 @@
     </div>
 
 
-
+    <script src="/scripts.js"></script>
 </body>
 
 </html>
