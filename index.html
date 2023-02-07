@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>GitHub Login</title>
 </head>
 
@@ -22,7 +24,28 @@
         <!-- sign in form -->
         <div class="border rounded-md bg-[#f6f8fa] p-4 w-80">
             <form action="" id="account-form" class="flex flex-col">
-                <label for="">Username or email address</label>
+                <label for="" class="flex justify-between group relative">
+                    Username or email address
+                    <!-- checked item information -->
+                    <div class="text-blue-500 ">
+                        <!-- info icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                        </svg>
+                        <!-- tool tip text -->
+                        <span
+                            class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-400 rounded-md absolute left-1/2 -translate-x-1/2 -translate-y-44 opacity-0 mx-auto w-80">
+                            - We want to validate the following:<br>
+                            - Username or email address is not empty.<br>
+                            - Username or email address is more that 6 characters.<br>
+                            - Username or email includes @<br>
+                            - Password fields is not empty.<br>
+                            - Password fiend is more than 6 characters.<br>
+                        </span>
+                    </div>
+                </label>
                 <input type="text" name="log-in" id="user-name-email" class="my-2 border rounded-md p-0.5" />
 
                 <div class="flex items-center space-x-24"><label for="">Password</label><a href="#"
